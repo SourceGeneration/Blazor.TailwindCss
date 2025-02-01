@@ -69,7 +69,7 @@ dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta1.250
 - [ ] break-inside
 - [ ] box-decoration-break
 - [ ] box-sizing
-- [x] display
+- [X] display
 - [ ] float
 - [ ] clear
 - [ ] isolation
