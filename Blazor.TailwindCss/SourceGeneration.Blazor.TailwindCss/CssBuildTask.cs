@@ -2,7 +2,7 @@
 
 namespace SourceGeneration.Blazor.TailwindCss;
 
-public class TailwindCssGenerateTask : Microsoft.Build.Utilities.Task
+public class CssBuildTask : Microsoft.Build.Utilities.Task
 {
     [Required] public string? ProjectDir { get; set; }
     [Required] public string? CssOuput { get; set; }

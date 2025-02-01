@@ -2,9 +2,9 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
 	<!--It is generated a target which is executed before the compilation-->
-	<Target Name="AfterCompile" AfterTargets="Build">
+	<Target Name="AfterBuild" AfterTargets="Build">
 		<!--Calling our custom task-->
-		<TailwindCssGenerateTask ProjectDir="$(RootFolder)" CssOuput="$(RootFolder)/wwwroot"></TailwindCssGenerateTask>
+		<CssBuildTask ProjectDir="$(RootFolder)" CssOuput="$(RootFolder)/wwwroot"></CssBuildTask>
 	</Target>
 	
 </Project>

@@ -18,7 +18,7 @@
 
 		<GenerateDependencyFile>true</GenerateDependencyFile>
 		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-		<BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+		<!--<BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>-->
 		<IsPackable>true</IsPackable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
