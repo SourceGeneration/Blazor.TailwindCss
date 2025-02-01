@@ -2,17 +2,64 @@
 
 [![NuGet](https://img.shields.io/nuget/vpre/SourceGeneration.Blazor.TailwindCss.svg)](https://www.nuget.org/packages/SourceGeneration.Blazor.TailwindCss)
 
+`SourceGeneration.Blazor.TailwindCss` dynamically generates the `tailwind.css` file by parsing class references in Razor files through MSBuild tasks after compilation.
+
+Scans all `*.razor` files, extracts class attribute values from HTML elements, supports:
+
+```html
+<div class="mt-2"></div>
+<MudText Class="p-2"></MudText>
+```
+
+Scans all `*.cs` files, extracts class from `CssBuilder.Class("...")`
+```c#
+public TypographyColors TypographyDark { get; set; } = new TypographyColors
+    {
+        Primary = CssBuilder.Class("text-white"),
+        Secondary = CssBuilder.Class("text-gray-300"),
+        Highlight = CssBuilder.Class("text-white"),
+    };
+```
+
+The `tailwind.css` file will be generated in the `wwwroot` folder after project compilation.
+
 ## Installing
 
 ```powershell
-Install-Package SourceGeneration.Blazor.TailwindCss -Version 1.0.0-beta4.250201.1
+Install-Package SourceGeneration.Blazor.TailwindCss -Version 1.0.0-beta1.250201.1
 ```
 
 ```powershell
-dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta4.250201.1
+dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta1.250201.1
 ```
 
-## Support Styles
+## Features
+
+### Responsive screen breakpoints
+`SourceGeneration.Blazor.TailwindCss` fully supports responsive prefixes (e.g., sm:, md:, lg:, xs:, xl:) for all CSS classes, enabling adaptive designs across screen breakpoints.
+
+```html
+<div class="xs:mt-1 sm:mt-2 md:mt-3 lg:mt-4 xl:mt-5">
+    <span class="xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl"></span>
+</div>
+```
+### Extended size ranges
+`SourceGeneration.Blazor.TailwindCss` extends Tailwind's utility classes by supporting:
+
+- Extended size ranges (e.g., p-1.5, p-200)
+- Decimal values parsed as floating-point numbers
+- Customizable spacing scale ({number} * 0.25rem)
+
+```html
+<Component class="p-1.5 md:p-200" /> 
+<!-- Generates: -->
+<style>
+.p-1\.5 { padding: 0.375rem; }
+.md\:p-200 { padding: 50rem; }
+</style>
+```
+
+## Styles
 
 #### LAYOUT
 - [ ] aspect-ratio
