@@ -22,73 +22,73 @@ dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta4.250
 - [ ] break-inside
 - [ ] box-decoration-break
 - [ ] box-sizing
-- [ ] display
+- [x] display
 - [ ] float
 - [ ] clear
 - [ ] isolation
 - [ ] object-fit
 - [ ] object-position
-- [ ] overflow
+- [x] overflow
 - [ ] overscroll-behavior
-- [ ] position
-- [ ] top / right / bottom / left
+- [x] position
+- [x] top / right / bottom / left
 - [ ] visibility
-- [ ] z-index
+- [x] z-index
 
 #### FLEXBOX & GRID
 - [ ] flex-basis
-- [ ] flex-direction
-- [ ] flex-wrap
-- [ ] flex
+- [x] flex-direction
+- [x] flex-wrap
+- [x] flex
 - [ ] flex-grow
 - [ ] flex-shrink
 - [ ] order
-- [ ] grid-template-columns
+- [x] grid-template-columns
 - [ ] grid-column
 - [ ] grid-template-rows
 - [ ] grid-row
 - [ ] grid-auto-flow
 - [ ] grid-auto-columns
 - [ ] grid-auto-rows
-- [ ] gap
-- [ ] justify-content
-- [ ] justify-items
-- [ ] justify-self
+- [x] gap
+- [x] justify-content
+- [x] justify-items
+- [x] justify-self
 - [ ] align-content
-- [ ] align-items
+- [x] align-items
 - [ ] align-self
 - [ ] place-content
 - [ ] place-items
 - [ ] place-self
 
 #### PACEING
-- [ ] padding
-- [ ] margin
+- [x] padding
+- [x] margin
 
 #### SIZING
-- [ ] width
-- [ ] min-width
-- [ ] max-width
-- [ ] height
-- [ ] min-height
-- [ ] max-height
+- [x] width
+- [x] min-width
+- [x] max-width
+- [x] height
+- [x] min-height
+- [x] max-height
 
 #### TYPOGRAPHY
-- [ ] font-family
-- [ ] font-size
+- [x] font-family
+- [x] font-size
 - [ ] font-smoothing
 - [ ] font-style
-- [ ] font-weight
+- [x] font-weight
 - [ ] font-stretch
 - [ ] font-variant-numeric
 - [ ] letter-spacing
-- [ ] line-clamp
+- [x] line-clamp
 - [ ] line-height
 - [ ] list-style-image
 - [ ] list-style-position
 - [ ] list-style-type
-- [ ] text-align
-- [ ] color
+- [x] text-align
+- [x] color
 - [ ] text-decoration-line
 - [ ] text-decoration-color
 - [ ] text-decoration-style
@@ -107,7 +107,7 @@ dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta4.250
 #### BACKGROUNDS
 - [ ] background-attachment
 - [ ] background-clip
-- [ ] background-color
+- [x] background-color
 - [ ] background-image
 - [ ] background-origin
 - [ ] background-position
@@ -115,17 +115,17 @@ dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta4.250
 - [ ] background-size
 
 #### BORDERS
-- [ ] border-radius
-- [ ] border-width
-- [ ] border-color
-- [ ] border-style
+- [x] border-radius
+- [x] border-width
+- [x] border-color
+- [x] border-style
 - [ ] outline-width
 - [ ] outline-color
 - [ ] outline-style
 - [ ] outline-offset
 
 #### EFFECTS
-- [ ] box-shadow
+- [x] box-shadow
 - [ ] opacity
 - [ ] mix-blend-mode
 - [ ] background-blend-mode
@@ -183,11 +183,11 @@ dotnet add package SourceGeneration.Blazor.TailwindCss --version 1.0.0-beta4.250
 - [ ] appearance
 - [ ] caret-color
 - [ ] color-scheme
-- [ ] cursor
+- [x] cursor
 - [ ] field-sizing
 - [ ] pointer-events
 - [ ] resize
-- [ ] scroll-behavior
+- [x] scroll-behavior
 - [ ] scroll-margin
 - [ ] scroll-padding
 - [ ] scroll-snap-align
