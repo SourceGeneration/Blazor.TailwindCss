@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>13</LangVersion>
+		<Version>1.0.0-beta1.250201.1</Version>
+
+		<Authors>SourceGeneration</Authors>
+		<Description>Tailwind CSS dynamic builder</Description>
+		<RepositoryUrl>https://github.com/SourceGeneration/Blazor.TailwindCss</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/SourceGeneration/Blazor.TailwindCss</PackageProjectUrl>
+		<PackageOutputPath>./../../../nupkg</PackageOutputPath>
+		<PackageIcon>sg.png</PackageIcon>
+		<PackageTags>tailwind,tailwind css,blazor,source generation</PackageTags>
+
+		<GenerateDependencyFile>true</GenerateDependencyFile>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+		<BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+		<IsPackable>true</IsPackable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include=".\..\..\sg.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<!-- These lines pack the build props/targets files to the `build` folder in the generated package.
+         By convention, the .NET SDK will look for build\<Package Id>.props and build\<Package Id>.targets
+         for automatic inclusion in the build. -->
+		<Content Include="build\SourceGeneration.Blazor.TailwindCss.props" PackagePath="build\" />
+		<Content Include="build\SourceGeneration.Blazor.TailwindCss.targets" PackagePath="build\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.11.4" PrivateAssets="all" />
+	</ItemGroup>
+
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+		<ItemGroup>
+			<!-- The dependencies of your MSBuild task must be packaged inside the package, they cannot be expressed as normal PackageReferences -->
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths)" TargetPath="%(ReferenceCopyLocalPaths.DestinationSubPath)" />
+		</ItemGroup>
+	</Target>
+
+</Project>
