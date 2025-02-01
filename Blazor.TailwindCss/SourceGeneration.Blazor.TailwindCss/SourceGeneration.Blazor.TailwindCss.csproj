@@ -8,7 +8,7 @@
 		<Version>1.0.0-beta1.250201.1</Version>
 
 		<Authors>SourceGeneration</Authors>
-		<Description>Tailwind CSS dynamic builder</Description>
+		<Description>Build-time CSS generator for Blazor that optimizes Tailwind integration. It scans Razor components, extracts all class values, then generates a minimal tailwind.css</Description>
 		<RepositoryUrl>https://github.com/SourceGeneration/Blazor.TailwindCss</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/SourceGeneration/Blazor.TailwindCss</PackageProjectUrl>
