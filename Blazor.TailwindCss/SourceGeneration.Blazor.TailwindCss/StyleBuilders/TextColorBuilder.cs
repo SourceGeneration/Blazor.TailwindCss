@@ -1,20 +1,26 @@
 ﻿namespace SourceGeneration.Blazor.TailwindCss.StyleBuilders;
 
-internal class LeadingStyleBuilder : StyleBuilder
+internal class TextColorBuilder : StyleBuilder
 {
     public override bool TryBuild(string name, string key, string value, StyleWriter writer)
     {
-        if (!key.Equals("leading"))
+        if (!key.Equals("text"))
         {
             return false;
         }
 
-        if (!byte.TryParse(value, out byte v))
+        string[]? style;
+        if (TwColors.TryGetColorStyle(value, out string? color))
+        {
+            style = [$"color:{color}"];
+        }
+        else
         {
             return false;
         }
 
-        writer.Write(name, $"line-height:{v * 0.25}rem");
+        writer.Write(name, style);
+
         return true;
     }
 }

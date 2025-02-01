@@ -37,6 +37,62 @@ internal class JustifyStyleBuilder : StyleBuilder
         {
             style = "justify-content:stretch";
         }
+        else if (value.Equals("items-"))
+        {
+            value = value.Substring(6);
+            if (value.Equals("start"))
+            {
+                style = "justify-items: start";
+            }
+            else if (value.Equals("end"))
+            {
+                style = "justify-items: end";
+            }
+            else if (value.Equals("center"))
+            {
+                style = "justify-items: center";
+            }
+            else if (value.Equals("stretch"))
+            {
+                style = "justify-items: stretch";
+            }
+            else if (value.Equals("normal"))
+            {
+                style = "justify-items: normal";
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else if (value.Equals("self-"))
+        {
+            value = value.Substring(5);
+            if (value.Equals("auto"))
+            {
+                style = "justify-self: auto";
+            }
+            else if (value.Equals("start"))
+            {
+                style = "justify-self: start";
+            }
+            else if (value.Equals("end"))
+            {
+                style = "justify-self: end";
+            }
+            else if (value.Equals("center"))
+            {
+                style = "justify-self: center";
+            }
+            else if (value.Equals("stretch"))
+            {
+                style = "justify-self: stretch";
+            }
+            else
+            {
+                return false;
+            }
+        }
         else
         {
             return false;

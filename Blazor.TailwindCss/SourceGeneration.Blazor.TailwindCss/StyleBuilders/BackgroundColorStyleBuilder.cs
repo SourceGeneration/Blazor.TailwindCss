@@ -1,6 +1,6 @@
 ﻿namespace SourceGeneration.Blazor.TailwindCss.StyleBuilders;
 
-internal class BgColorStyleBuilder : StyleBuilder
+internal class BackgroundColorStyleBuilder : StyleBuilder
 {
     public override bool TryBuild(string name, string key, string value, StyleWriter writer)
     {

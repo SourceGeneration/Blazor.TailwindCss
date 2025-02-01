@@ -21,26 +21,30 @@ internal sealed partial class CssRenderer
         new GapStyleBuilder(),
         new AlignItemsStyleBuilder(),
         new JustifyStyleBuilder(),
-        new SpaceStyleBuilder(),
+        new MarginSpaceStyleBuilder(),
 
         new DisplayStyleBuilder(),
         new PositionStyleBuilder(),
         new OverflowStyleBuilder(),
         new InsetStyleBuilder(),
 
-        new TextStyleBuilder(),
-        new LeadingStyleBuilder(),
+        new TextAlignBuilder(),
+        new TextColorBuilder(),
+        new FontSizeBuilder(),
+        new FontWeightBuilder(),
+        new FontFamilyBuilder(),
+
+        new LineHeightStyleBuilder(),
         new LineClampStyleBuilder(),
-        new FontStyleBuilder(),
 
         new CursorStyleBuilder(),
 
-        new BgColorStyleBuilder(),
+        new BackgroundColorStyleBuilder(),
         new BorderStyleBuilder(),
-        new ShadowStyleBuilder(),
-        new RoundedStyleBuilder(),
+        new BoxShadowStyleBuilder(),
+        new BorderRadiusStyleBuilder(),
 
-        new ScrollStyleBuilder(),
+        new ScrollBehaviorStyleBuilder(),
     ];
 
     public static string Analyze(string directory)

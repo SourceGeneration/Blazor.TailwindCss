@@ -1,6 +1,5 @@
 ﻿namespace SourceGeneration.Blazor.TailwindCss.StyleBuilders;
-
-internal class TextStyleBuilder : StyleBuilder
+internal class FontSizeBuilder : StyleBuilder
 {
     public override bool TryBuild(string name, string key, string value, StyleWriter writer)
     {
